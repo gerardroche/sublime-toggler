@@ -4,8 +4,6 @@ Toggle complex settings at the speed of thought.
 
 ## Installation
 
-### Manual installation
-
 Close Sublime Text, then download or clone this repository to a directory named **Toggler** in the Sublime Text Packages directory for your platform:
 
 **Linux**
@@ -33,7 +31,7 @@ Toggle Preview on Click     | Toggle `preview_on_click`
 Toggle Rulers               | Toggle `rulers`; on: `[80, 120]`, off: `[]`
 Toggle Save on Focus Lost   | Toggle `save_on_focus_lost`
 
-## Settings
+## Configuration
 
 User settings can override the default on and off values for complex settings by appending `"_toggle_on"` and `"_toggle_off"` to the setting name.
 
@@ -60,7 +58,7 @@ Another example customizing the "on" value for Indent Guides:
 ],
 ```
 
-## Custom Commands
+## Customization
 
 Command name: `toggler`
 
