@@ -1,6 +1,6 @@
 # Toggler
 
-Toggle settings command with on/off configurations.
+Toggle complex settings at the speed of thought.
 
 ## Commands
 
@@ -33,7 +33,7 @@ For instance to customize the "off" value for Invisibles:
 
 Another example customizing the "on" value for Indent Guides:
 
-```
+```js
 "indent_guide_options_toggle_on":
 [
     "draw_normal",
