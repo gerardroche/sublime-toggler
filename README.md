@@ -2,6 +2,24 @@
 
 Toggle complex settings at the speed of thought.
 
+## Installation
+
+### Manual installation
+
+Close Sublime Text, then download or clone this repository to a directory named **Toggler** in the Sublime Text Packages directory for your platform:
+
+**Linux**
+
+`git clone https://github.com/gerardroche/sublime-toggler.git ~/.config/sublime-text-3/Packages/Toggler`
+
+**OSX**
+
+`git clone https://github.com/gerardroche/sublime-toggler.git ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/Toggler`
+
+**Windows**
+
+`git clone https://github.com/gerardroche/sublime-toggler.git %APPDATA%\Sublime/ Text/ 3/Packages/Toggler`
+
 ## Commands
 
 Command                     | Description
