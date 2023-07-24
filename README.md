@@ -1,6 +1,8 @@
 # Toggler
 
-Toggle complex settings at the speed of thought.
+Toggler helps you configure toggle commands for complex settings like Invisibles, Indent Guides, Rulers, etc. You can create your own too.
+
+All toggle commands are available from the command palette. For advanced usage see [Settings](#Settings).
 
 ## Installation
 
@@ -20,66 +22,91 @@ Close Sublime Text, then download or clone this repository to a directory named 
 
 ## Commands
 
-Command                     | Description
-:------                     | :----------
-Toggle Fold Buttons         | Toggle `fold_buttons`
-Toggle Highlight Line       | Toggle `highlight_line`
-Toggle Indent Guides        | Toggle `indent_guide_options`; on: `["draw_normal", "draw_active"]`, off: `[]`
-Toggle Invisibles           | Toggle `draw_white_space`; on: `"all"`, off: `"selection"`
-Toggle Line Numbers         | Toggle `line_numbers`
-Toggle Preview on Click     | Toggle `preview_on_click`
-Toggle Rulers               | Toggle `rulers`; on: `[80, 120]`, off: `[]`
-Toggle Save on Focus Lost   | Toggle `save_on_focus_lost`
+Command                     | Type      | Setting                   | Default on/off
+:------                     |:--------- | :------------------------ |: -------------
+Toggle Fold Buttons         | `boolean` | `fold_buttons`            |
+Toggle Highlight Line       | `boolean` | `highlight_line`          |
+Toggle Indent Guides        | `list`    | `indent_guide_options`    | `["draw_normal", "draw_active"]` / `[]`
+Toggle Invisibles           | `list`    | `draw_white_space`        | `["all"]` / `["selection"]`
+Toggle Line Numbers         | `boolean` | `line_numbers`            |
+Toggle Preview on Click     | `boolean` | `preview_on_click`        |
+Toggle Rulers               | `list`    | `rulers`                  | `[80, 120]` / `[]`
+Toggle Save on Focus Lost   | `boolean` | `save_on_focus_lost`      |
 
-## Configuration
+## Settings
 
-User settings can override the default on and off values for complex settings by appending `"_toggle_on"` and `"_toggle_off"` to the setting name.
+To set on and off defaults for a setting, appending `"_toggle_on"` and `"_toggle_off"` to the setting.
 
-For instance to customize the "off" value for Invisibles:
-
-```js
-"draw_white_space_toggle_off":
-[
-    "leading_mixed",
-    "selection",
-    "trailing",
-    "isolated"
-],
-```
-
-Another example customizing the "on" value for Indent Guides:
-
-```js
-"indent_guide_options_toggle_on":
-[
-    "draw_normal",
-    "solid",
-    "draw_active"
-],
-```
-
-## Customization
-
-Command name: `toggler`
-
-Argument  | Type     | Default  | Description
-:-------- | :------- | :------- | :----------
-`setting` | `string` |          | Setting name
-`on`      |          | `true`   | Default on value
-`off`     |          | `false`  | Default off value
-
-**Example**
+**Example:** Set on/off defaults for the `draw_white_space` setting
 
 ```json
 {
-    "caption": "Toggle Indent Guides",
-    "command": "toggler",
-    "args": {
-        "setting": "indent_guide_options",
-        "on": ["draw_normal", "draw_active"],
-        "off": []
-    }
+    "draw_white_space_toggle_on": ["all"],
+    "draw_white_space_toggle_off": ["leading_mixed", "selection", "trailing", "isolated"],
 }
+```
+
+**Example:** Set on/off defaults for the `indent_guide_options` setting
+
+```json
+{
+    "indent_guide_options_toggle_on": ["draw_normal", "solid", "draw_active"],
+    "indent_guide_options_toggle_off": [],
+}
+```
+
+## Custom Commands
+
+You can create your own toggle commands.
+
+The command name is **`toggler`**.
+
+The available arguments are as follows:
+
+Argument  | Type                                    | Default
+:-------- | :-------------------------------------- | :-------
+`setting` | `string`                                |
+`on`      | `boolean`, `integer`, `string`, `list`  | `true`
+`off`     | `boolean`, `integer`, `string`, `list`  | `false`
+
+If the `{on}` or `{off}` arguments are not provided the option is assumed to be boolean.
+
+**Example Command**
+
+Find your User directory via Menu → Browse Packages.
+
+> User/Default.sublime-commands
+
+```json
+[
+    {
+        "caption": "Toggle Indent Guides",
+        "command": "toggler",
+        "args": {
+            "setting": "indent_guide_options",
+            "on": ["draw_normal", "draw_active"],
+            "off": []
+        }
+    }
+]
+```
+
+**Example Key Binding**
+
+Menu → Preferences → Key Bindings
+
+```json
+[
+    {
+        "keys": ["ctrl+n"],
+        "command": "toggler",
+        "args": {
+            "setting": "indent_guide_options",
+            "on": ["draw_normal", "draw_active"],
+            "off": []
+        }
+    },
+]
 ```
 
 ## License
