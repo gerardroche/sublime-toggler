@@ -22,7 +22,6 @@ class Toggler(sublime_plugin.WindowCommand):
             if preferences.get(preference_name) == value:
                 value = self.get_off_value_or(off)
 
-            print('value =', value)
             preferences.set(preference_name, value)
 
             for window in windows():
