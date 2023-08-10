@@ -1,6 +1,7 @@
 [
 
     { "caption": "Toggle Fold Buttons", "command": "toggler", "args": {"setting": "fold_buttons"} },
+    { "caption": "Toggle Gutter", "command": "toggler", "args": {"setting": "gutter"} },
     { "caption": "Toggle Highlight Line", "command": "toggler", "args": {"setting": "highlight_line"} },
     { "caption": "Toggle Indent Guides", "command": "toggler", "args": {"setting": "indent_guide_options", "on": ["draw_normal", "draw_active"], "off": []} },
     { "caption": "Toggle Invisibles", "command": "toggler", "args": {"setting": "draw_white_space", "on": "all", "off": "selection"} },
@@ -9,4 +10,5 @@
     { "caption": "Toggle Rulers", "command": "toggler", "args": {"setting": "rulers", "on": [80, 120], "off": []} },
     { "caption": "Toggle Save on Focus Lost", "command": "toggler", "args": {"setting": "save_on_focus_lost"} },
     { "caption": "Toggle Spell Check", "command": "toggler", "args": {"setting": "spell_check"} },
+
 ]
