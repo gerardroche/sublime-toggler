@@ -1,37 +1,45 @@
 # Toggler
 
-Toggler helps you configure toggle commands for complex settings like Invisibles, Indent Guides, Rulers, etc. You can create your own too.
+Toggler simplifies the process of configuring toggle commands for intricate settings such as Invisibles, Indent Guides, Rulers, and more. You also have the freedom to create your own custom toggles.
 
-All toggle commands are available from the command palette. For advanced usage see [Settings](#Settings).
+Access all toggle commands conveniently through the command palette. For more advanced utilization, refer to the [Settings](#Settings) section.
 
 ## Installation
 
-Close Sublime Text, then download or clone this repository to a directory named **Toggler** in the Sublime Text Packages directory for your platform:
+**Method 1: Manual Installation**
 
-**Linux**
+1. Visit the [Toggler GitHub repository](https://github.com/gerardroche/sublime-toggler).
+2. Click on the "Code" button and select "Download ZIP."
+3. Extract the downloaded ZIP file.
+4. Open Sublime Text and go to `Preferences -> Browse Packages...` to open the Packages folder.
+5. Copy the "Toggler" folder from the extracted ZIP and paste it into the Packages folder.
 
-`git clone https://github.com/gerardroche/sublime-toggler.git ~/.config/sublime-text-3/Packages/Toggler`
+**Method 2: Manual Git Repository Installation**
 
-**OSX**
-
-`git clone https://github.com/gerardroche/sublime-toggler.git ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/Toggler`
-
-**Windows**
-
-`git clone https://github.com/gerardroche/sublime-toggler.git %APPDATA%\Sublime/ Text/ 3/Packages/Toggler`
+1. Open a terminal or command prompt.
+2. Navigate to the Sublime Text Packages directory:
+    - On Windows: `%APPDATA%\Sublime Text\Packages`
+    - On macOS: `~/Library/Application Support/Sublime Text/Packages`
+    - On Linux: `~/.config/sublime-text/Packages`
+3. Clone the plugin repository directly into the Packages directory using Git:
+   ```
+   git clone https://github.com/gerardroche/sublime-toggler.git Toggler
+   ```
 
 ## Commands
 
-Command                     | Type      | Setting                   | Default on/off
-:------                     |:--------- | :------------------------ |: -------------
-Toggle Fold Buttons         | `boolean` | `fold_buttons`            |
-Toggle Highlight Line       | `boolean` | `highlight_line`          |
-Toggle Indent Guides        | `list`    | `indent_guide_options`    | `["draw_normal", "draw_active"]` / `[]`
-Toggle Invisibles           | `list`    | `draw_white_space`        | `["all"]` / `["selection"]`
-Toggle Line Numbers         | `boolean` | `line_numbers`            |
-Toggle Preview on Click     | `boolean` | `preview_on_click`        |
-Toggle Rulers               | `list`    | `rulers`                  | `[80, 120]` / `[]`
-Toggle Save on Focus Lost   | `boolean` | `save_on_focus_lost`      |
+| Command                     | Type      | Setting                   | Default on/off
+| :------                     |:--------- | :------------------------ |: -------------
+| Toggle Fold Buttons         | Boolean   | `fold_buttons`            |
+| Toggle Gutter               | Boolean   | `gutter`                  |
+| Toggle Highlight Line       | Boolean   | `highlight_line`          |
+| Toggle Indent Guides        | List      | `indent_guide_options`    | `["draw_normal", "draw_active"]` / `[]`
+| Toggle Invisibles           | List      | `draw_white_space`        | `["all"]` / `["selection"]`
+| Toggle Line Numbers         | Boolean   | `line_numbers`            |
+| Toggle Preview on Click     | Boolean   | `preview_on_click`        |
+| Toggle Rulers               | List      | `rulers`                  | `[80, 120]` / `[]`
+| Toggle Save on Focus Lost   | Boolean   | `save_on_focus_lost`      |
+| Toggle Spell Check          | Boolean   | `spell_check`             |
 
 ## Settings
 
