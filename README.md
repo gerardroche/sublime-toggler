@@ -29,7 +29,7 @@ Access all toggle commands conveniently through the command palette. For more ad
 ## Commands
 
 | Command                     | Type      | Setting                   | Default on/off
-| :------                     |:--------- | :------------------------ |: -------------
+| :-------------------------- | :-------- | :------------------------ | :-------------
 | Toggle Fold Buttons         | Boolean   | `fold_buttons`            |
 | Toggle Gutter               | Boolean   | `gutter`                  |
 | Toggle Highlight Line       | Boolean   | `highlight_line`          |
