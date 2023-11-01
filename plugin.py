@@ -44,6 +44,7 @@ class Toggler(sublime_plugin.WindowCommand):
             for window in windows():
                 for view in window.views():
                     view.settings().erase(preference_name)
+                    view.erase_status(preference_name.replace('show_', ''))
 
         status_message('{} is {}'.format(
             self.setting.replace('_', ' ').title(),
