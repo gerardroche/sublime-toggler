@@ -9,6 +9,8 @@
     { "caption": "Toggle Preview on Click", "command": "toggler", "args": {"setting": "preview_on_click"} },
     { "caption": "Toggle Rulers", "command": "toggler", "args": {"setting": "rulers", "on": [80, 120], "off": []} },
     { "caption": "Toggle Save on Focus Lost", "command": "toggler", "args": {"setting": "save_on_focus_lost"} },
+    { "caption": "Toggle Show Indentation", "command": "toggler", "args": {"setting": "show_indentation"} },
+    { "caption": "Toggle Show Syntax", "command": "toggler", "args": {"setting": "show_syntax"} },
     { "caption": "Toggle Spell Check", "command": "toggler", "args": {"setting": "spell_check"} },
 
 ]
