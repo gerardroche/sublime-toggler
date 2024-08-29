@@ -3,7 +3,7 @@
     { "caption": "Toggle Fold Buttons", "command": "toggler", "args": {"setting": "fold_buttons"} },
     { "caption": "Toggle Gutter", "command": "toggler", "args": {"setting": "gutter"} },
     { "caption": "Toggle Highlight Line", "command": "toggler", "args": {"setting": "highlight_line"} },
-    { "caption": "Toggle Indent Guides", "command": "toggler", "args": {"setting": "indent_guide_options", "on": ["draw_normal", "draw_active"], "off": []} },
+    { "caption": "Toggle Indent Guides", "command": "toggler", "args": {"setting": "draw_indent_guides"} },
     { "caption": "Toggle Invisibles", "command": "toggler", "args": {"setting": "draw_white_space", "on": "all", "off": "selection"} },
     { "caption": "Toggle Line Numbers", "command": "toggler", "args": {"setting": "line_numbers"} },
     { "caption": "Toggle Preview on Click", "command": "toggler", "args": {"setting": "preview_on_click"} },
